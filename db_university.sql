@@ -13,6 +13,8 @@ SELECT *
 FROM `students`
 WHERE DATEDIFF(CURRENT_DATE, `date_of_birth`) >= 10957;
 
+-- TIMESTAMPDIFF(YEAR, `date_of_birth`, CURRENT_DATE) > 30;
+
 -- Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea
 SELECT *
 FROM `courses`
@@ -35,4 +37,4 @@ FROM `departments`;
 -- Quanti sono gli insegnanti che non hanno un numero di telefono?
 SELECT COUNT(*) AS "num_teachers"
 FROM `teachers`
-WHERE `phone` IS NOT NULL;
+WHERE `phone` IS NULL;
